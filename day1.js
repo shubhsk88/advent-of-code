@@ -26,12 +26,14 @@ const getThreeMeasurementSingleWindow = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     prevSum += Number(arr[i]);
     currentSum = prevSum;
+    // Only consider element more than three
     if (i >= 2) {
       result.push(prevSum);
       prevSum -= Number(arr[windowIndex]);
       windowIndex += 1;
     }
   }
+  // check the difference
   for (let i = 1; i < result.length; i += 1) {
     if (result[i] - result[i - 1] > 0) count += 1;
   }
