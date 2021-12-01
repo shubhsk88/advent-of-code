@@ -1,0 +1,8 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shubhsk88/advent-of-code",
+  "author": "Shubham Singh <shubham88singh@gmail.com>",
+  "license": "MIT"
+}
