@@ -1,8 +1,4 @@
-const fs = require('fs');
-
-const data = fs.readFileSync('./input1.txt', 'utf-8');
-
-const values = data.split('\n');
+const 
 
 const getDepthMeasurement = (arr) => {
   let count = 0;
