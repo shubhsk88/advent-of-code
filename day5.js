@@ -37,8 +37,18 @@ const calculatePoints = (arr) => {
         }
         hash[coord] += 1;
       }
+    } else if (startX === startY && endX === endY) {
+      console.log({ startX, endX, startY, endY });
+      for (let i = startX + 1; i < endX; i += 1) {
+        const coord = `${i},${i}`;
+        if (!hash[coord]) {
+          hash[coord] = 0;
+        }
+        hash[coord] += 1;
+      }
     }
   }
+
   for (const item in hash) {
     if (hash[item] >= 2) {
       count += 1;
@@ -46,5 +56,20 @@ const calculatePoints = (arr) => {
   }
   return count;
 };
+
+console.log(
+  calculatePoints([
+    '0,9 -> 5,9',
+    '8,0 -> 0,8',
+    '9,4 -> 3,4',
+    '2,2 -> 2,1',
+    '7,0 -> 7,4',
+    '6,4 -> 2,0',
+    '0,9 -> 2,9',
+    '3,4 -> 1,4',
+    '0,0 -> 8,8',
+    '5,5 -> 8,2',
+  ])
+);
 
 console.log(calculatePoints(values));
